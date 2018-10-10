@@ -7,17 +7,18 @@
     <name>elasticsearch-binary-vector-scoring</name>
     <groupId>com.liorkn.elasticsearch</groupId>
     <artifactId>elasticsearch-binary-vector-scoring</artifactId>
+    <!-- VERSION -->
     <version>5.6.12</version>
     <description>ElasticSearch Plugin for Binary Vector Scoring</description>
-    
+
     <licenses>
-    		<license>
+        <license>
             <name>The Apache Software License, Version 2.0</name>
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
-    
+
     <properties>
         <!-- define class name for the descriptor file -->
         <elasticsearch.plugin.classname>com.liorkn.elasticsearch.plugin.VectorScoringPlugin</elasticsearch.plugin.classname>
@@ -27,14 +28,15 @@
         <elasticsearch.license.headerDefinition>${project.basedir}/src/main/resources/license-check/license_header_definition.xml</elasticsearch.license.headerDefinition>
 
         <tests.ifNoTests>warn</tests.ifNoTests>
-		<elasticsearch.version>5.6.12</elasticsearch.version>
+        <!-- VERSION -->
+        <elasticsearch.version>5.6.12</elasticsearch.version>
         <commons-io.version>2.4</commons-io.version>
         <httpcore.version>4.4.8</httpcore.version>
         <junit.version>4.12</junit.version>
         <jackson.version>2.7.4</jackson.version>
     </properties>
-    
-    
+
+
     <dependencies>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -73,6 +75,7 @@
         <dependency>
             <groupId>org.codelibs.elasticsearch.module</groupId>
             <artifactId>reindex</artifactId>
+            <!-- VERSION -->
             <version>5.6.10</version>
             <scope>test</scope>
             <exclusions>
@@ -95,6 +98,7 @@
         <dependency>
             <groupId>org.codelibs.elasticsearch.module</groupId>
             <artifactId>lang-painless</artifactId>
+            <!-- VERSION -->
             <version>5.6.5</version>
             <scope>test</scope>
         </dependency>
@@ -114,7 +118,6 @@
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>
             <version>${elasticsearch.version}</version>
-            <!--<version>5.6.8</version>-->
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.httpcomponents</groupId>
@@ -147,12 +150,12 @@
         </dependency>
 
         <dependency>
-			<groupId>com.google.collections</groupId>
-			<artifactId>google-collections</artifactId>
-			<version>1.0</version>
-		</dependency>
+            <groupId>com.google.collections</groupId>
+            <artifactId>google-collections</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
-    
+
    <!-- needed for the snapshots of elasticsearch -->
     <repositories>
         <repository>
@@ -163,7 +166,7 @@
     </repositories>
 
     <build>
-    		<resources>
+        <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
@@ -181,7 +184,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-			<plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
